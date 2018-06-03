@@ -13,6 +13,7 @@
 		5A19E13220C37D9F00695FEC /* CoreDataByKiloloco.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A19E13020C37D9F00695FEC /* CoreDataByKiloloco.xcdatamodeld */; };
 		5A19E13420C37DA200695FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A19E13320C37DA200695FEC /* Assets.xcassets */; };
 		5A19E13720C37DA200695FEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A19E13520C37DA200695FEC /* LaunchScreen.storyboard */; };
+		5A19E13F20C3800700695FEC /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A19E13E20C3800700695FEC /* PersistenceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5A19E13320C37DA200695FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A19E13620C37DA200695FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A19E13820C37DA200695FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A19E13E20C3800700695FEC /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				5A19E12920C37D9F00695FEC /* AppDelegate.swift */,
+				5A19E13E20C3800700695FEC /* PersistenceService.swift */,
 				5A19E12B20C37D9F00695FEC /* ViewController.swift */,
 				5A19E12D20C37D9F00695FEC /* Main.storyboard */,
 				5A19E13320C37DA200695FEC /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A19E13220C37D9F00695FEC /* CoreDataByKiloloco.xcdatamodeld in Sources */,
+				5A19E13F20C3800700695FEC /* PersistenceService.swift in Sources */,
 				5A19E12C20C37D9F00695FEC /* ViewController.swift in Sources */,
 				5A19E12A20C37D9F00695FEC /* AppDelegate.swift in Sources */,
 			);

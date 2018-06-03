@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,52 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataByKiloloco" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQK-zG-LM5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="EFZ-cw-3LQ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="D0X-94-Xcs"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSU-bu-hmE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="1dh-GT-DNP">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nJx-Wj-SQN">
+                                            <connections>
+                                                <action selector="onePlusTapped:" destination="BYZ-38-t0r" id="dau-EQ-tnT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oSU-bu-hmE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GP4-LS-1KV"/>
+                            <constraint firstItem="GQK-zG-LM5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="He4-sP-xh6"/>
+                            <constraint firstItem="oSU-bu-hmE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M7c-nS-wi0"/>
+                            <constraint firstItem="GQK-zG-LM5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="U84-Pm-nbw"/>
+                            <constraint firstItem="oSU-bu-hmE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cs7-SE-Lns"/>
+                            <constraint firstItem="GQK-zG-LM5" firstAttribute="top" secondItem="oSU-bu-hmE" secondAttribute="bottom" id="fNo-pC-Pqk"/>
+                            <constraint firstItem="GQK-zG-LM5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fjQ-A1-giF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="GQK-zG-LM5" id="vdv-zJ-Rq9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
